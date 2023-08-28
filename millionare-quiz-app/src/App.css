@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.app {
+  height: 100vh;
+  display: flex;
+  background-color: #020230;
+  color: #fff;
+}
+.main {
+  width: 75%;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+    url("./image/background.jpg") center;
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  height: 50%;
+  position: relative;
+}
+.bottom {
+  height: 50%;
+}
+.trivia {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.question {
+  width: 80%;
+  background: linear-gradient(#222267, black);
+  text-align: center;
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.answers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.answer {
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(#000004, rgb(23, 21, 85));
+  border: 1px solid #fff;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 10px 20px 10px;
+  cursor: pointer;
+}
+.answer.active {
+  background: mediumblue;
+}
+.answer.correct {
+  animation: correct 2.5s ease forwards;
+}
+@keyframes correct {
+  0% {
+    background: mediumblue;
+  }
+  100% {
+    background: green;
+  }
+}
+.answer.wrong {
+  animation: wrong 2.5s ease forwards;
+}
+@keyframes wrong {
+  0% {
+    background: mediumblue;
+  }
+  100% {
+    background: crimson;
+  }
+}
+.timer {
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 27px;
+}
+.timer.danger {
+  color: crimson;
+  border-color: crimson;
+}
+.pyramid {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.money-list {
+  list-style: none;
+  width: 100%;
+  padding: 25px;
+}
+.money-list-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 5px 0;
+}
+.money-list-item.active {
+  background-color: teal;
+  border-radius: 5px;
+}
+.number {
+  font-size: 18px;
+  font-weight: 100;
+  width: 30%;
+}
+.amount {
+  font-size: 20px;
+}
+.result {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 25px;
+  font-weight: 700;
+  background-color: #06061e;
+  width: 30%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+button {
+  position: absolute;
+  top: 70%;
+  left: 33%;
+  padding: 15px;
+  background-color: #18184e;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+button:hover {
+  background-color: #fff;
+  color: #18184e;
+}
